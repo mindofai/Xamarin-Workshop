@@ -1,5 +1,5 @@
 # Xamarin Workshop
- MONDPH's Xamarin Workshop is a 3-day hands-on session here in the Philippines wherein we talk about Xamarin from the very basic to advanced topics. This repository has all the slides, source codes, and videos we used for the workshop
+ MONDPH's Xamarin Workshop is a 3-day hands-on session here in the Philippines wherein we talk about Xamarin from the very basic to advanced topics. This repository has all the slides, source codes, and videos we used for the workshop.
 
 ### Videos (NOTE: Make sure to join our Facebook group to be able to view the videos)
 
