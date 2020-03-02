@@ -1,0 +1,14 @@
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\bin\Debug\netstandard2.0\BasicUI.deps.json
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\bin\Debug\netstandard2.0\BasicUI.dll
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\bin\Debug\netstandard2.0\ref\BasicUI.dll
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\bin\Debug\netstandard2.0\BasicUI.pdb
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\BasicUI.AssemblyInfoInputs.cache
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\BasicUI.AssemblyInfo.cs
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\BasicUI.dll
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\ref\BasicUI.dll
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\BasicUI.pdb
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\BasicUI.csprojAssemblyReference.cache
+C:\Users\RalphGutierrez\source\repos\BasicUI\BasicUI\BasicUI\obj\Debug\netstandard2.0\AnimeDetails.xaml.g.cs

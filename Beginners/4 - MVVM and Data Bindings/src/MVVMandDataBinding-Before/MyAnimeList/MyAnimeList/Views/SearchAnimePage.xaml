@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MyAnimeList.Views.SearchAnimePage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             Padding="20"
+             prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Search Anime Page" />
+            <Button Command="{Binding ProceedCommand}"
+                    Text="Proceed" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

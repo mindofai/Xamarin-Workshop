@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyAnimeList.Views.SearchAnimePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    Padding="20"
+    prism:ViewModelLocator.AutowireViewModel="True">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Search here..."
+                    Text="{Binding SearchKeyword, Mode=TwoWay}" />
+                <Button Command="{Binding SearchCommand}" Text="Search" />
+            </StackLayout>
+
+
+            <ListView
+                Grid.Row="1"
+                HasUnevenRows="False"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRefreshing}"
+                ItemsSource="{Binding AnimeDetails}"
+                RefreshCommand="{Binding RefreshCommand}"
+                RowHeight="120"
+                SeparatorVisibility="None">
+
+                <ListView.Behaviors>
+                    <prism:EventToCommandBehavior
+                        Command="{Binding ItemTappedCommand}"
+                        EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}"
+                        EventName="ItemTapped" />
+                </ListView.Behaviors>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5,20,5,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="95" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+                                    MinimumWidthRequest="95"
+                                    Source="{Binding ImageSrc}"
+                                    WidthRequest="95" />
+
+                                <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="18"
+                                        Text="{Binding Title}" />
+                                    <Label
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="2"
+                                        Text="{Binding Synopsis}" />
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

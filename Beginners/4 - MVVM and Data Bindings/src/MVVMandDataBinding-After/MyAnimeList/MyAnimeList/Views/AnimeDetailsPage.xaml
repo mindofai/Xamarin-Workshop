@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MyAnimeList.Views.AnimeDetailsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    Title="{Binding SelectedAnime.Title}"
+    Padding="20"
+    prism:ViewModelLocator.AutowireViewModel="True">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackLayout>
+                    <Image
+                        HeightRequest="120"
+                        MinimumHeightRequest="120"
+                        Source="{Binding SelectedAnime.ImageSrc}"
+                        VerticalOptions="FillAndExpand" />
+
+
+                    <Label FontSize="14" HorizontalOptions="CenterAndExpand">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Rating: " />
+                                <Span Text="{Binding SelectedAnime.Rating}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="Title" />
+                    <Label
+                        Margin="0,0,0,10"
+                        FontSize="16"
+                        Text="{Binding SelectedAnime.Title}" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="Synopsis" />
+                    <Label
+                        Margin="0,0,0,10"
+                        FontSize="16"
+                        Text="{Binding SelectedAnime.Synopsis}" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="Start Date" />
+                    <Label
+                        Margin="0,0,0,10"
+                        FontSize="16"
+                        Text="{Binding SelectedAnime.StartDate, StringFormat='{0:MMM dd, yyyy HH:mm}'}" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        Text="End Date" />
+                    <Label
+                        Margin="0,0,0,10"
+                        FontSize="16"
+                        Text="{Binding SelectedAnime.EndDate, StringFormat='{0:MMM dd, yyyy HH:mm}'}" />
+                    <Button
+                        BackgroundColor="#004d40"
+                        Command="{Binding VisitSiteCommand}"
+                        Text="VISIT SITE"
+                        TextColor="White" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
