@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrudLocalDb.Views.ItemsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="BrowseItemsPage"
+    Title="{Binding Title}"
+    mc:Ignorable="d">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding AddItemCommand}" Text="Add" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ListView
+            x:Name="ItemsListView"
+            HasUnevenRows="true"
+            ItemSelected="OnItemSelected"
+            ItemsSource="{Binding Items}"
+            SelectionMode="Single"
+            VerticalOptions="FillAndExpand">
+            <d:ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>First Item</x:String>
+                    <x:String>Second Item</x:String>
+                    <x:String>Third Item</x:String>
+                    <x:String>Fourth Item</x:String>
+                    <x:String>Fifth Item</x:String>
+                    <x:String>Sixth Item</x:String>
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                                Command="{Binding BindingContext.UpdateCommand, Source={x:Reference BrowseItemsPage}}"
+                                CommandParameter="{Binding .}"
+                                Text="Update" />
+                            <MenuItem
+                                Command="{Binding BindingContext.DeleteCommand, Source={x:Reference BrowseItemsPage}}"
+                                CommandParameter="{Binding .}"
+                                Text="Delete" />
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="10">
+                            <Label
+                                FontSize="16"
+                                Style="{DynamicResource ListItemTextStyle}"
+                                Text="{Binding Text}" />
+                            <Label
+                                FontSize="13"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                Text="{Binding Description}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

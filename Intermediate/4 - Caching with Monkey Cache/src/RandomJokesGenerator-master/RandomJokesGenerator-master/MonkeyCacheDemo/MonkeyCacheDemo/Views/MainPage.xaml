@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MonkeyCacheDemo.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MonkeyCacheDemo.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationPage.TitleView>
+        <Label
+            Text="Random Programming Jokes"
+            TextColor="White"
+            VerticalOptions="CenterAndExpand" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ListView
+                Grid.Row="0"
+                Margin="10,5,10,5"
+                HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRefreshing}"
+                ItemsSource="{Binding Jokes}"
+                RefreshCommand="{Binding RefreshCommand}"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                Margin="0,5,0,5"
+                                Padding="15"
+                                CornerRadius="10"
+                                HasShadow="True">
+                                <StackLayout>
+                                    <Label FontSize="{StaticResource MediumFontSize}" Text="{Binding Setup}" />
+                                    <Label Text="{Binding Punchline}" TextColor="{DynamicResource AccentColor}" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <controls:OfflineIndicator Grid.Row="1" IsVisible="{Binding IsConnected}" />
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

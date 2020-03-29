@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             mc:Ignorable="d"
+             x:Class="EssenstialsAndMap.MainPage">
+    
+    <StackLayout Padding="20">
+        <Label Text="Store Information" 
+               TextColor="Navy"
+               FontSize="24"
+               FontAttributes="Bold"/>
+        <StackLayout Padding="0,10">
+            <Label Text="Shake and Bake" 
+               TextColor="Black"
+               FontSize="20"
+               FontAttributes="Bold"/>
+
+            <!--Description-->
+            <Label x:Name="description" Text="Shake and Bake is a cafe/bakery that serves the number one ice cream, fruit shakes, and the freshest pastries in Manila." 
+               TextColor="Gray"
+               FontSize="15"
+               FontAttributes="Bold"/>
+            <Button Text="Read for me" 
+               TextColor="CornflowerBlue"
+               BackgroundColor="Navy"
+               FontSize="16"
+               FontAttributes="Bold"
+                    Clicked="ReadDescription"/>
+
+            <!--Contact Number-->
+            <Label Text="Contact Number" 
+               TextColor="CornflowerBlue"
+               FontSize="16"
+               FontAttributes="Bold"/>
+            <Label x:Name="contactNumber" Text="+639054057203" 
+               TextColor="Gray"
+               FontSize="15"
+               FontAttributes="Bold"/>
+            <Button Text="Call" 
+               TextColor="CornflowerBlue"
+               BackgroundColor="Navy"
+               FontSize="16"
+               FontAttributes="Bold"
+                    Clicked="CallContactNumber"/>
+
+            <!--Store Address-->
+            <Label Text="Store Address" 
+               TextColor="CornflowerBlue"
+               FontSize="16"
+               FontAttributes="Bold"/>
+            <Label x:Name="storeAddress" Text="Jacinto St., Concepcion, Malabon City, Philippines" 
+               TextColor="Gray"
+               FontSize="15"
+               FontAttributes="Bold"/>
+            <Button Text="See Directions" 
+               TextColor="CornflowerBlue"
+               BackgroundColor="Navy"
+               FontSize="16"
+               FontAttributes="Bold"
+                    Clicked="SeeDirections"/>
+        </StackLayout>
+        <map:Map x:Name="map">
+        </map:Map>
+    </StackLayout>
+</ContentPage>

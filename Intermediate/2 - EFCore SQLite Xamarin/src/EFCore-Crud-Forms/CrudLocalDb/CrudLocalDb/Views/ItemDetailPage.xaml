@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrudLocalDb.Views.ItemDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{Binding Title}"
+    mc:Ignorable="d">
+    <StackLayout Padding="15">
+        <StackLayout Spacing="20">
+            <Label FontSize="Medium" Text="Text:" />
+            <Label
+                d:Text="Item name"
+                FontSize="Small"
+                Text="{Binding Name}" />
+            <Label FontSize="Medium" Text="Description:" />
+            <Label
+                d:Text="Item description"
+                FontSize="Small"
+                Text="{Binding Description}" />
+            <StackLayout
+                BindableLayout.ItemsSource="{Binding Tags}"
+                Orientation="Horizontal"
+                Spacing="5"
+                VerticalOptions="Start">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#3499db"
+                            CornerRadius="5">
+                            <Label
+                                Padding="5"
+                                FontSize="Small"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding Name}"
+                                TextColor="White"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

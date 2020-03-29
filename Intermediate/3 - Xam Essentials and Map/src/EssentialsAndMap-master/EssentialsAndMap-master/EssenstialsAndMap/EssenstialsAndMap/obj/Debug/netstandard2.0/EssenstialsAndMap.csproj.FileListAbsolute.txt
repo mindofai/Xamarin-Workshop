@@ -1,0 +1,12 @@
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\bin\Debug\netstandard2.0\EssenstialsAndMap.deps.json
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\bin\Debug\netstandard2.0\EssenstialsAndMap.dll
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\bin\Debug\netstandard2.0\ref\EssenstialsAndMap.dll
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\bin\Debug\netstandard2.0\EssenstialsAndMap.pdb
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\EssenstialsAndMap.AssemblyInfoInputs.cache
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\EssenstialsAndMap.AssemblyInfo.cs
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\EssenstialsAndMap.dll
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\ref\EssenstialsAndMap.dll
+C:\Users\bryan\source\repos\EssenstialsAndMap\EssenstialsAndMap\EssenstialsAndMap\obj\Debug\netstandard2.0\EssenstialsAndMap.pdb

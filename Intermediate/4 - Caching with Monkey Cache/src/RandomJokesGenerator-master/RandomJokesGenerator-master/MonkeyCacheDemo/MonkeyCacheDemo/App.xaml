@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="MonkeyCacheDemo.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary>
+
+                <Color x:Key="AccentColor">#663399</Color>
+                <Color x:Key="DefaultColor">#2e3131</Color>
+
+                <x:Double x:Key="DefaultFontSize">14</x:Double>
+                <x:Double x:Key="MediumFontSize">16</x:Double>
+
+                <OnPlatform x:Key="RegularFont" x:TypeArguments="x:String">
+                    <On Platform="Android" Value="AvantGardeBookBT.ttf#AvantGarde Bk BT" />
+                </OnPlatform>
+
+                <OnPlatform x:Key="MediumFont" x:TypeArguments="x:String">
+                    <On Platform="Android" Value="AvantGardeDemiBTBold.ttf#AvantGarde Bk BT" />
+                </OnPlatform>
+
+                <Style ApplyToDerivedTypes="True" TargetType="Entry">
+                    <Setter Property="PlaceholderColor" Value="White" />
+                    <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+                    <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+                    <Style.Triggers>
+                        <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
+                            <Setter Property="FontFamily" Value="{StaticResource MediumFont}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+                <Style ApplyToDerivedTypes="True" TargetType="Label">
+                    <Setter Property="TextColor" Value="{StaticResource DefaultColor}" />
+                    <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+                    <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+                    <Style.Triggers>
+                        <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
+                            <Setter Property="FontFamily" Value="{StaticResource MediumFont}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+                <Style ApplyToDerivedTypes="True" TargetType="NavigationPage">
+                    <Setter Property="BarBackgroundColor" Value="{DynamicResource AccentColor}" />
+                    <Setter Property="BarTextColor" Value="White" />
+                </Style>
+
+            </ResourceDictionary>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

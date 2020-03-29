@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrudLocalDb.Views.UpdateItemDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{Binding Title}"
+    mc:Ignorable="d">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding SaveCommand}" Text="Save" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="15" Spacing="20">
+            <Entry
+                d:Text="Item name"
+                FontSize="Small"
+                Placeholder="Name"
+                Text="{Binding Name, Mode=TwoWay}" />
+            <Entry
+                d:Text="Item description"
+                FontSize="Small"
+                Placeholder="Description"
+                Text="{Binding Description, Mode=TwoWay}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
